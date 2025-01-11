@@ -9,13 +9,9 @@ function submit(){
         alert("Please add your task");
         return;
     }
-
-    list.innerHTML = ""
     arrOfTodo.push(inp.value)
-    console.log(arrOfTodo);
     
     arrOfTodo.forEach(function (todoList,index){
-        console.log(todoList);
         
         let myDiv = document.createElement("div")
         myDiv.setAttribute("id",index)
@@ -62,6 +58,20 @@ function edit(){
     console.log("checked...");
     let inp = document.querySelector("input")
     let list = document.querySelector("#list")
+    let add = document.querySelector("#add")
     list.innerHTML = inp.value
     inp.value = " "
-}
+    add.innerText = "Add"
+    arrOfTodo.forEach(function (todoList,index){
+        console.log(todoList);
+        
+        let myDiv = document.createElement("div")
+        myDiv.setAttribute("id",index)
+        myDiv.innerHTML = `<p> ${inp.value} </p>
+        <button onclick="editHandler(this)">Edit</button>
+        <button onclick="deleteHandler(this)">Delete</button>`
+        
+        list.appendChild(myDiv)
+    })
+    inp.value = ``
+    }
