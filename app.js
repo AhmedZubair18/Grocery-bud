@@ -9,6 +9,7 @@ function submit(){
         alert("Please add your task");
         return;
     }
+    list.innerHTML = ''
     arrOfTodo.push(inp.value)
     
     arrOfTodo.forEach(function (todoList,index){
