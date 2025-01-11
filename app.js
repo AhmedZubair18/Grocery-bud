@@ -62,6 +62,6 @@ function edit(){
     console.log("checked...");
     let inp = document.querySelector("input")
     let list = document.querySelector("#list")
-
     list.innerHTML = inp.value
+    inp.value = " "
 }
