@@ -1,0 +1,33 @@
+body{
+    background-color:aqua;
+}
+
+.box{
+    width: 400px;
+    background-color: white;
+   text-align: center;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#list{
+  text-align: center;
+}
+input{
+    border-color:green;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: aliceblue;
+}
+button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+button:hover{
+    background-color:blueviolet;
+}
